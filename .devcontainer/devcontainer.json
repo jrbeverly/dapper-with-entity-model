@@ -26,5 +26,5 @@
 		"humao.rest-client",
 	],
 	"remoteUser": "vscode",
-	"postAttachCommand": "make -C EntityModel init",
+	"postAttachCommand": "make -C src init",
 }
