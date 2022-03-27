@@ -26,5 +26,5 @@
 		"humao.rest-client",
 	],
 	"remoteUser": "vscode",
-	"postAttachCommand": "make -C DapperCoreTest init",
+	"postAttachCommand": "make -C EntityModel init",
 }
