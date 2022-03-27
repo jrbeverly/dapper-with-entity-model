@@ -1,0 +1,30 @@
+{
+    "name": "C# (.NET) and PostgreSQL (Community)",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+	"settings": {},
+	"forwardPorts": [5000, 5432, 5480 ],
+	"portsAttributes": {
+		"5000": {
+			"label": "Backend",
+			"onAutoForward": "notify"
+		},
+		"5432": {
+			"label": "Postgres",
+			"onAutoForward": "notify"
+		},
+		"5480": {
+			"label": "PGAdmin",
+			"onAutoForward": "notify"
+		}
+	},
+	"extensions": [
+		"ms-dotnettools.csharp",
+		"ms-azuretools.vscode-docker",
+		"bazelbuild.vscode-bazel",
+		"humao.rest-client",
+	],
+	"remoteUser": "vscode",
+	"postAttachCommand": "make -C DapperCoreTest init",
+}
